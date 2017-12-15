@@ -3,11 +3,12 @@ MachineLearning_Course with demos and labs
 
 
 # Final Project 
-# Real Estate Zestimate Prediction 
-./Zillow/ is our Machine Learning project. We use Linear Regression/LASSO in XGBOOST to predict logerror between Zestimate and real sale price.
+# Kaggle-Zillow Competetion on Real Estate Zestimate Prediction 
+./Zillow/PJ is our Machine Learning project. We use gradient boosting decision tree in XGBOOST to simulate Linear Regression/LASSO and predict logerror between Zestimate and real sale price.
 
 # Details
-Most of the detailed data and explanation will be found on the website 
+Most of the detailed data and explanation will be found on the competition website.
+We are near the leader board
 ```sh
 https://www.kaggle.com/c/zillow-prize-1
 ```
@@ -16,18 +17,26 @@ https://www.kaggle.com/c/zillow-prize-1
 ---------------------------
 ## First Step: Data Collection 
 
-At the beginning of our project, we need to find a huge property data Source and the data also need some attibutes, which can support us to do more fancy test in Machine Learning. Because a small data set always cases data overfit. Fortunately, we found 2 million rows dat of PM2.5 in Harvard CGA website. Now let's us to do the project ! 
-
-Because of GitHub file size's limit is 100MB and property.csv is more than 500 MB, you can find the original data source here:
+All the property/train/test/submit data are posted online in kaggle's website.
 ```sh
 https://www.kaggle.com/c/zillow-prize-1/data
 ```
+
+Or you could also participate in the competition and use kernels there/
+Because of GitHub file size's limit is 100MB and property.csv is more than 500 MB, I haven't uploaded all data to github.
+you can find the original data from kaggle-zillow source site.
+
 
 ---------------------------
 ## Second Step: Data Extraction and Clean
 After we get the data. First, we decide to only use One hundred thousand data, Because it's need long time to process two million data.
 
 Second, we find there are lots of invalid rows, which have '-' or NaN. Before we do Machine Learning, we need to clean the data. So we write a data clean function to help us clean and standardize data.
+.
+This is a great contributor's kernel that explain what happened for each feature and describe many things about the input data 
+```sh
+https://www.kaggle.com/sudalairajkumar/simple-exploration-notebook-zillow-prize
+```
 
 Now we can get all the valid data set, it has 93790 rows, 1 column output,and 10 column attributes.
 
