@@ -1,19 +1,26 @@
 # MachineLearning_Course
-MachineLearning_Course 
+MachineLearning_Course with demos and labs
 
 
 # Final Project 
-# PM2.5 Prediction by Machine Learning
+# Real Estate Zestimate Prediction 
 ./Zillow/ is our Machine Learning project. We use Linear Regression/LASSO in XGBOOST to predict logerror between Zestimate and real sale price.
+
+# Details
+Most of the detailed data and explanation will be found on the website 
+```sh
+https://www.kaggle.com/c/zillow-prize-1
+```
+
 
 ---------------------------
 ## First Step: Data Collection 
 
 At the beginning of our project, we need to find a huge property data Source and the data also need some attibutes, which can support us to do more fancy test in Machine Learning. Because a small data set always cases data overfit. Fortunately, we found 2 million rows dat of PM2.5 in Harvard CGA website. Now let's us to do the project ! 
 
-Because GitHub's file size limit of 100MB, you can find the original pm2.5 data source here:
+Because of GitHub file size's limit is 100MB and property.csv is more than 500 MB, you can find the original data source here:
 ```sh
-http://aqi.cga.harvard.edu/china/cumulative/
+https://www.kaggle.com/c/zillow-prize-1/data
 ```
 
 ---------------------------
