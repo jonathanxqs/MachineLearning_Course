@@ -44,9 +44,9 @@ sample = pd.read_csv('../input/sample_submission.csv') with shape (2985217, 7) ,
   Second, we find there are lots of invalid rows, which have '-' or NaN. Before we do Machine Learning, we need to clean the data. 
   So we drop the feature ['parcelid', 'logerror', 'transactiondate', 'propertyzoningdesc', 'propertycountylandusecode'] to clean and standardize data.
   There is a great contributor's kernel that explain what happened for each feature and describe many things about the input data.
-```sh
+
 [others' kernel for features engineering](https://www.kaggle.com/sudalairajkumar/simple-exploration-notebook-zillow-prize)
-```
+
 
 Now we can get all the valid training data and split it into training and testing set. 
 Training set has 80000 samples, while 10275 samples is in the testing set.  
@@ -63,7 +63,7 @@ More details in Zillow/PJ/FinalPJ.ipynb
 Final Result:
 
 | Model        | Valid-Mae |  Train-Mae |   
-| :---         |     :---:      |   
+
 | XGBoost linear regression   | 0.066869     |  0.06731  |  
 
 
@@ -71,7 +71,7 @@ Training ...
 [0] train-mae:0.473647  valid-mae:0.466725  
 Multiple eval metrics have been passed: 'valid-mae' will be used for early stopping.  
 
-Will train until valid-mae hasn't improved in 100 rounds.
+Will train until valid-mae hasn't improved in 100 rounds.  
 [10]    train-mae:0.292472  valid-mae:0.285894  
 [20]    train-mae:0.187569  valid-mae:0.181947  
 [30]    train-mae:0.128486  valid-mae:0.1238  
