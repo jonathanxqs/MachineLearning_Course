@@ -5,7 +5,6 @@ MachineLearning_Course with demos and labs
 # Final Project 
 [My kernel and relevant PDF](https://github.com/jonathanxqs/MachineLearning_Course/tree/master/Zillow/PJ) is our Machine Learning project. We use gradient boosting decision tree in XGBOOST to simulate Linear Regression/LASSO and predict logerror between Zestimate and real sale price.
 
-
 # Can Xu : cx461@nyu.edu
 # Guanyu Zhu : gz623@nyu.edu
 
