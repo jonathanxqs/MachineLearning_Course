@@ -12,19 +12,16 @@ MachineLearning_Course with demos and labs
 
 # Details
 Most of the detailed data and explanation will be found on the competition website.
-We are near the leader board
-```sh
-https://www.kaggle.com/c/zillow-prize-1
-```
+We are right near the leader board.
+
+[Zillow-Kaggle Competition](https://www.kaggle.com/c/zillow-prize-1)
 
 
 ---------------------------
 ## First Step: Data Collection 
 
-All the property/train/test/submit data are posted online in kaggle's website.
-```sh
-https://www.kaggle.com/c/zillow-prize-1/data
-```
+All the property/train/test/submit data are posted online in kaggle's website.  
+[Training Data and Sample Submission](https://www.kaggle.com/c/zillow-prize-1/data)  
 
 Or you could also participate in the competition and use kernels there.
 Because of GitHub file size's limit is 100MB and property.csv is more than 500 MB, I haven't uploaded all data to github.
@@ -41,11 +38,11 @@ train = pd.read_csv('../input/train_2016_v2.csv', parse_dates=["transactiondate"
 prop = pd.read_csv('../input/properties_2016.csv') with shape (2985217, 58) , or 2985217 real properties and 58 features for each.  
 sample = pd.read_csv('../input/sample_submission.csv') with shape (2985217, 7) , or 2985217 real properties and 6 estimated logerrors 
 ```
-  Second, we find there are lots of invalid rows, which have '-' or NaN. Before we do Machine Learning, we need to clean the data. 
+  Second, we find there are lots of invalid rows, which have '-' or NaN. Before we do Machine Learning, we need to clean the data.   
   So we drop the feature ['parcelid', 'logerror', 'transactiondate', 'propertyzoningdesc', 'propertycountylandusecode'] to clean and standardize data.
-  There is a great contributor's kernel that explain what happened for each feature and describe many things about the input data.
+  Check my projects to see what happened for each feature and describe many things about the input data.  
 
-[others' kernel for features engineering](https://www.kaggle.com/sudalairajkumar/simple-exploration-notebook-zillow-prize)
+[My kernel](https://github.com/jonathanxqs/MachineLearning_Course/tree/master/Zillow/PJ)
 
 
 Now we can get all the valid training data and split it into training and testing set. 
