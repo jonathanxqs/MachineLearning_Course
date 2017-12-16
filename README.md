@@ -6,7 +6,7 @@ MachineLearning_Course with demos and labs
 # Kaggle-Zillow Competetion on Real Estate Zestimate Prediction 
 ./Zillow/PJ is our Machine Learning project. We use gradient boosting decision tree in XGBOOST to simulate Linear Regression/LASSO and predict logerror between Zestimate and real sale price.
 
-# Team : CrusaderEmp
+
 # Can Xu : cx461@nyu.edu
 # Guanyu Zhu : gz623@nyu.edu
 
