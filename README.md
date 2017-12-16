@@ -13,6 +13,12 @@ Most of the detailed data and explanation will be found on the competition websi
 We are right near the leader board.  
 [Zillow-Kaggle Competition](https://www.kaggle.com/c/zillow-prize-1)
 
+# Abstrat
+Training data are 2985217 real estate properties with 55 features , Y is the logerror between real sale price and zillow-estimates.
+We also got 90275 training Y(logerror values).  
+Competition testing samples were among other real properties and logerrors.   
+We need to compile our model and submit relevant answers.    
+
 
 ---------------------------
 ## First Step: Data Collection 
