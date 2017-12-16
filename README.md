@@ -3,8 +3,7 @@ MachineLearning_Course with demos and labs
 
 
 # Final Project 
-# Kaggle-Zillow Competetion on Real Estate Zestimate Prediction 
-./Zillow/PJ is our Machine Learning project. We use gradient boosting decision tree in XGBOOST to simulate Linear Regression/LASSO and predict logerror between Zestimate and real sale price.
+[My kernel and relevant PDF](https://github.com/jonathanxqs/MachineLearning_Course/tree/master/Zillow/PJ) is our Machine Learning project. We use gradient boosting decision tree in XGBOOST to simulate Linear Regression/LASSO and predict logerror between Zestimate and real sale price.
 
 
 # Can Xu : cx461@nyu.edu
@@ -12,8 +11,7 @@ MachineLearning_Course with demos and labs
 
 # Details
 Most of the detailed data and explanation will be found on the competition website.
-We are right near the leader board.
-
+We are right near the leader board.  
 [Zillow-Kaggle Competition](https://www.kaggle.com/c/zillow-prize-1)
 
 
@@ -44,6 +42,20 @@ sample = pd.read_csv('../input/sample_submission.csv') with shape (2985217, 7) ,
 
 [My kernel](https://github.com/jonathanxqs/MachineLearning_Course/tree/master/Zillow/PJ)
 
+Params is attached
+```sh
+xgb_params = {
+    'eval_metric':'mae',   # mae since ZillowMae Score , rmse as default
+    'eta':0.04,             # laerning rate by grid search
+    'max_depth': 6,
+    'subsample': 0.7,           # decrease over-fitting
+    'colsample_bytree': 0.7,    #
+    'objective': 'reg:linear',
+    'silent': 1,  # on 
+    'seed' : 0,
+    'alpha' : 0.2  # L1 Lasso
+}
+```
 
 Now we can get all the valid training data and split it into training and testing set. 
 Training set has 80000 samples, while 10275 samples is in the testing set.  
@@ -55,34 +67,26 @@ Finally, we write all the output to csv file.
 
 ---------------------------
 ## Final Step: Metics and Performance
-More details in Zillow/PJ/FinalPJ.ipynb
+More details in Zillow/PJ/FinalPJ.ipynb and PDF report
 
 Final Result:
 
 | Model        | Valid-Mae |  Train-Mae |   
 
-| XGBoost linear regression   | 0.066869     |  0.06731  |  
-
+| XGBoost lineWar regression   | 0.066811     |  0.067153  |  
 
 Training ...  
-[0] train-mae:0.473647  valid-mae:0.466725  
+[0] train-mae:0.47845   valid-mae:0.471523  
 Multiple eval metrics have been passed: 'valid-mae' will be used for early stopping.  
 
 Will train until valid-mae hasn't improved in 100 rounds.  
-[10]    train-mae:0.292472  valid-mae:0.285894  
-[20]    train-mae:0.187569  valid-mae:0.181947  
-[30]    train-mae:0.128486  valid-mae:0.1238  
-[40]    train-mae:0.096615  valid-mae:0.092716  
-[50]    train-mae:0.080704  valid-mae:0.077597  
-[60]    train-mae:0.073306  valid-mae:0.070987  
-[70]    train-mae:0.070015  valid-mae:0.068339  
-[80]    train-mae:0.068535  valid-mae:0.067304  
-[90]    train-mae:0.06784   valid-mae:0.066991  
-[100]   train-mae:0.067459  valid-mae:0.066894  
-[110]   train-mae:0.067209  valid-mae:0.066888  
-[120]   train-mae:0.067065  valid-mae:0.066924  
-[180]   train-mae:0.066508  valid-mae:0.067213  
-[190]   train-mae:0.066432  valid-mae:0.067296  
-[200]   train-mae:0.066335  valid-mae:0.067354  
+[10]    train-mae:0.32512   valid-mae:0.318413   
+[20]    train-mae:0.225484  valid-mae:0.219383   
+[110]   train-mae:0.067866  valid-mae:0.067025  
+[120]   train-mae:0.06748   valid-mae:0.066888  
+[130]   train-mae:0.067235  valid-mae:0.066829  
+[140]   train-mae:0.067073  valid-mae:0.066821  
+[220]   train-mae:0.066372  valid-mae:0.067071   
+[230]   train-mae:0.0663    valid-mae:0.067104  
 Stopping. Best iteration:  
-[106]   train-mae:0.06731   valid-mae:0.066869  
+[134]   train-mae:0.067153  valid-mae:0.066811
