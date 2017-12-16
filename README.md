@@ -36,16 +36,22 @@ You can find the original data from kaggle-zillow source site.
 
 After we get the data. First, we decide to interpret the data and extract features.
 
+```sh
 train = pd.read_csv('../input/train_2016_v2.csv', parse_dates=["transactiondate"]) with shape (90275, 3) , or 90275 training real properties and their price logerrors
-prop = pd.read_csv('../input/properties_2016.csv') with shape (2985217, 58) , or 2985217 real properties and 58 features for each.
-sample = pd.read_csv('../input/sample_submission.csv') with shape (2985217, 7) , or 2985217 real properties and 6 estimated logerrors 
 
-Second, we find there are lots of invalid rows, which have '-' or NaN. Before we do Machine Learning, we need to clean the data. So we drop the feature ['parcelid', 'logerror', 'transactiondate', 'propertyzoningdesc', 'propertycountylandusecode'] to clean and standardize data.
+prop = pd.read_csv('../input/properties_2016.csv') with shape (2985217, 58) , or 2985217 real properties and 58 features for each.
+
+sample = pd.read_csv('../input/sample_submission.csv') with shape (2985217, 7) , or 2985217 real properties and 6 estimated logerrors 
+```sh
+
+
+Second, we find there are lots of invalid rows, which have '-' or NaN. Before we do Machine Learning, we need to clean the data. 
+\<br>So we drop the feature ['parcelid', 'logerror', 'transactiondate', 'propertyzoningdesc', 'propertycountylandusecode'] to clean and standardize data.
 
 
 There is a great contributor's kernel that explain what happened for each feature and describe many things about the input data.
 ```sh
-https://www.kaggle.com/sudalairajkumar/simple-exploration-notebook-zillow-prize
+[others' kernel for features engineering](https://www.kaggle.com/sudalairajkumar/simple-exploration-notebook-zillow-prize)
 ```
 
 Now we can get all the valid training data and split it into training and testing set. 
