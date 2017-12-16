@@ -90,3 +90,7 @@ Will train until valid-mae hasn't improved in 100 rounds.
 [230]   train-mae:0.0663    valid-mae:0.067104  
 Stopping. Best iteration:  
 [134]   train-mae:0.067153  valid-mae:0.066811
+
+The best in leaderboard is about 0.0787, which is larger than ours mae score.  
+But public and private test data would use new data set, usually it would lower our performance and get larger MAE. 
+We should take more time for better prize.  
