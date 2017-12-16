@@ -62,14 +62,14 @@ More details in Zillow/PJ/FinalPJ.ipynb
 
 Final Result:
 
-| Model        | Valid-Mae |  Train-Mae | 
-| :---         |     :---:      | 
-| XGBoost linear regression   | 0.066869     |  0.06731  |
+| Model        | Valid-Mae |  Train-Mae |   
+| :---         |     :---:      |   
+| XGBoost linear regression   | 0.066869     |  0.06731  |  
 
 
-Training ...
-[0] train-mae:0.473647  valid-mae:0.466725
-Multiple eval metrics have been passed: 'valid-mae' will be used for early stopping.
+Training ...  
+[0] train-mae:0.473647  valid-mae:0.466725  
+Multiple eval metrics have been passed: 'valid-mae' will be used for early stopping.  
 
 Will train until valid-mae hasn't improved in 100 rounds.
 [10]    train-mae:0.292472  valid-mae:0.285894  
