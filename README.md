@@ -21,7 +21,7 @@ All the property/train/test/submit data are posted online in kaggle's website.
 [Training Data and Sample Submission](https://www.kaggle.com/c/zillow-prize-1/data)  
 
 Or you could also participate in the competition and use kernels there.
-Because of GitHub file size's limit is 100MB and property.csv is more than 500 MB, I haven't uploaded all data to github.
+Because of GitHub file size's limit is 100MB and property.csv is more than 500 MB, I cannot uploaded all data to github.
 You can find the original data from kaggle-zillow source site.
 
 
@@ -45,13 +45,13 @@ Params is attached
 ```sh
 xgb_params = {
     'eval_metric':'mae',   # mae since ZillowMae Score , rmse as default
-    'eta':0.04,             # laerning rate by grid search
-    'max_depth': 6,
+    'eta':0.04,             # learning rate by grid search
+    'max_depth': 6,         # max depth of decision tree
     'subsample': 0.7,           # decrease over-fitting
-    'colsample_bytree': 0.7,    #
-    'objective': 'reg:linear',
+    'colsample_bytree': 0.7,    # decrease over-fitting
+    'objective': 'reg:linear',  # linear regression 
     'silent': 1,  # on 
-    'seed' : 0,
+    'seed' : 0,   # random seed 
     'alpha' : 0.2  # L1 Lasso
 }
 ```
@@ -59,8 +59,8 @@ xgb_params = {
 Now we can get all the valid training data and split it into training and testing set. 
 Training set has 80000 samples, while 10275 samples is in the testing set.  
 
-XGBoost is a quite powerful kit in ML competition, it uses gradient boosting decision tree to prune and solve the overfitting problems in linear-model.  
-Since Zillow-Mae is the metric , we use the mae as XGBOOST metrics.
+XGBoost is a very powerful kit in ML competition, it uses gradient boosting decision tree to prune and solve the overfitting problems in linear-model.  
+Since Zillow-Mae is the metric, we use the mae as XGBOOST metrics.
 LASSO parameters are alse important in our predictions.
 Finally, we write all the output to csv file.
 
@@ -72,7 +72,7 @@ Final Result:
 
 | Model        | Valid-Mae |  Train-Mae |   
 
-| XGBoost lineWar regression   | 0.066811     |  0.067153  |  
+| XGBoost Linear regression + Lasso   | 0.066811     |  0.067153  |  
 
 Training ...  
 [0] train-mae:0.47845   valid-mae:0.471523  
