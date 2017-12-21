@@ -32,12 +32,13 @@ Or you could also participate in the competition and use kernels there.
 Because of GitHub file size's limit is 100MB and property.csv is more than 500 MB, I cannot uploaded all data to github.
 You can find the original data from kaggle-zillow source site.
 
-#Reference : Public Kernel for that competition
-[Demo1 kernel](https://www.kaggle.com/sudalairajkumar/simple-exploration-notebook-zillow-prize)  
+#Reference : Public Kernel for that competition  
+[Analysis Demo kernel](https://www.kaggle.com/viveksrinivasan/zillow-eda-on-missing-values-multicollinearity)  
+Pure analysis of cool and smart features without training.  
+
+[Train Demo kernel](https://www.kaggle.com/sudalairajkumar/simple-exploration-notebook-zillow-prize)  
 That Kernels Demonstrate many interesting property and also use XGBOOST for demo.  
 But get worse results since parameters are not best and too much data clean for Train data.  
-[Demo2 kernel](https://www.kaggle.com/viveksrinivasan/zillow-eda-on-missing-values-multicollinearity)  
-Pure analysis of cool and smart features without training.  
 
 
 ---------------------------
