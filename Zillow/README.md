@@ -26,15 +26,23 @@ We need to compile our model and submit relevant answers.
 All the property/train/test/submit data are posted online in kaggle's website.  
 [Training Data and Sample Submission](https://www.kaggle.com/c/zillow-prize-1/data)  
 
+
+
 Or you could also participate in the competition and use kernels there.
 Because of GitHub file size's limit is 100MB and property.csv is more than 500 MB, I cannot uploaded all data to github.
 You can find the original data from kaggle-zillow source site.
 
+#Reference : Public Kernel for that competition
+[Demo kernel](https://www.kaggle.com/sudalairajkumar/simple-exploration-notebook-zillow-prize)  
+That Kernel Demonstrate many interesting value of the property and also use XGBOOST for demo.  
+But get worse results since parameters are not best and too much data clean for Train data.
 
 ---------------------------
 ## Second Step: Data Clean and Features Engineering
 
 After we get the data. First, we decide to interpret the data and extract features.
+
+
 
 ```sh
 train = pd.read_csv('../input/train_2016_v2.csv', parse_dates=["transactiondate"]) with shape (90275, 3) , or 90275 training real properties and their price logerrors  
